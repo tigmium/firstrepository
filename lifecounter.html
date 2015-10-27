@@ -1,0 +1,205 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="testcounter.css">		
+		<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+		<script src="testcounter.js"></script>
+		
+		<title>
+			magic
+		</title>
+		<script type="text/javascript">
+
+			function DisableOnContextMenu(ev) {
+			  return false;
+			}
+
+			function DisableContextMenu(ev) {
+			  if (ev) {
+				if (ev.button && ev.button == 2) {  // W3C DOM2
+				  return false;
+				} else if (!ev.button && ev.which == 3) {  // N4
+				  return false;
+				} else if (navigator.platform.indexOf("Mac")!=-1
+				  && navigator.appName == "Netscape") {
+				  return false;
+				}
+			  } else {
+				if (event && event.button && event.button == 2) {  // IE
+				  return false;
+				}
+			  }
+			}
+
+			if (navigator.appName == "Netscape"
+			  && !(navigator.platform.indexOf("Mac")!=-1)) {
+			  document.captureEvents(Event.MOUSEDOWN);
+			}
+
+			document.onmousedown=DisableContextMenu;
+			document.oncontextmenu=DisableOnContextMenu;
+			// http://mozilla.gr.jp/standards/webtips1002.html よりコピペ
+		</script>
+	</head>
+	
+	<body>
+		<input type="button" onclick="countResetAll(20)" value = "Reset" class="allReset">
+		<!-- リセットボタン、valueの値に両方のカウントがリセットされます。初期値はここでいじってね-->
+		<form name="form1" class="numCounter"><br><br>
+			<center>
+				<input size="10" value="20" class="countOut"
+					   name="cnt_txt" readOnly>
+				<input type="button" value="0" class="numButton_P"
+					   name="poison" onclick="countChange_P_1(1)" oncontextmenu="countReset_P_1(0)">
+				<!--general-->
+				<input type="button" value="0" class="numButton_G_2"
+					   name="general_1" onclick="generalD_1_1(1)" oncontextmenu="generalD_1_1(-1)">
+				<input type="button" value="0" class="numButton_G_3"
+					   name="general_2" onclick="generalD_1_2(1)" oncontextmenu="generalD_1_2(-1)">
+				<input type="button" value="0" class="numButton_G_4"
+					   name="general_3" onclick="generalD_1_3(1)" oncontextmenu="generalD_1_3(-1)">
+			</center>
+			<br>
+			<center>
+				<input type="button" value="-1" class="numButton_A"
+					   name="m_btn" onclick="countChange(-1)">
+				<input type="button" value="+1" class="numButton_A"
+					   name="p_btn" onclick="countChange(1)">　　　　　　
+					<br>　　　
+				<input type="button" value="-5" class="numButton_B"
+					   name="m_5_btn" onclick="countChange(-5)">　
+				<input type="button" value="+5" class="numButton_B"
+					   name="p_5_btn" onclick="countChange(5)">　　　
+				<input type="button" value="20" class="numButton_C"
+					   name="Reset_btn" onclick="countReset(20)">
+			</center>
+		</form>
+		<!-- form1~/formまでが左側。-->
+		<form name="form2" class="numCounter_2"><br><br>
+			<center>
+				<input size="10" value="20" class="countOut_2"
+					   name="cnt_txt_2" readOnly>
+				<input type="button" value="0" class="numButton_P"
+					   name="poison" onclick="countChange_P_2(1)" oncontextmenu="countReset_P_2(0)">
+				<!--general-->
+				<input type="button" value="0" class="numButton_G_1"
+					   name="general_1" onclick="generalD_2_1(1)" oncontextmenu="generalD_2_1(-1)">
+				<input type="button" value="0" class="numButton_G_3"
+					   name="general_2" onclick="generalD_2_2(1)" oncontextmenu="generalD_2_2(-1)">
+				<input type="button" value="0" class="numButton_G_4"
+					   name="general_3" onclick="generalD_2_3(1)" oncontextmenu="generalD_2_3(-1)">
+			</center>
+			<br>
+			<center>
+				<input type="button" value="-1" class="numButton_A"
+					   name="m_btn" onclick="countChange_2(-1)">
+				<input type="button" value="+1" class="numButton_A"
+					   name="p_btn" onclick="countChange_2(1)">　　　　　　
+					<br>　　　
+				<input type="button" value="-5" class="numButton_B"
+					   name="m_5_btn" onclick="countChange_2(-5)">　
+				<input type="button" value="+5" class="numButton_B"
+					   name="p_5_btn" onclick="countChange_2(5)">　　　
+				<input type="button" value="20" class="numButton_C"
+					   name="Reset_btn" onclick="countReset_2(20)">
+			</center>
+		</form>
+		<br>
+		<form name="form3" class="numCounter_3"><br><br>
+			<center>
+				<input size="10" value="20" class="countOut_3"
+					   name="cnt_txt_3" readOnly>
+				<input type="button" value="0" class="numButton_P"
+					   name="poison" onclick="countChange_P_3(1)" oncontextmenu="countReset_P_3(0)">
+				<!--general-->
+				<input type="button" value="0" class="numButton_G_1"
+					   name="general_1" onclick="generalD_3_1(1)" oncontextmenu="generalD_3_1(-1)">
+				<input type="button" value="0" class="numButton_G_2"
+					   name="general_2" onclick="generalD_3_2(1)" oncontextmenu="generalD_3_2(-1)">
+				<input type="button" value="0" class="numButton_G_4"
+					   name="general_3" onclick="generalD_3_3(1)" oncontextmenu="generalD_3_3(-1)">
+			</center>
+			<br>
+			<center>
+				<input type="button" value="-1" class="numButton_A"
+					   name="m_btn" onclick="countChange_3(-1)">
+				<input type="button" value="+1" class="numButton_A"
+					   name="p_btn" onclick="countChange_3(1)">　　　　　　
+					<br>　　　
+				<input type="button" value="-5" class="numButton_B"
+					   name="m_5_btn" onclick="countChange_3(-5)">　
+				<input type="button" value="+5" class="numButton_B"
+					   name="p_5_btn" onclick="countChange_3(5)">　　　
+				<input type="button" value="20" class="numButton_C"
+					   name="Reset_btn" onclick="countReset_3(20)">
+			</center>
+		</form>
+		<form name="form4" class="numCounter_4"><br><br>
+			<center>
+				<input size="10" value="20" class="countOut_4"
+					   name="cnt_txt_4" readOnly>
+				<input type="button" value="0" class="numButton_P"
+					   name="poison" onclick="countChange_P_4(1)" oncontextmenu="countReset_P_4(0)">
+				<!--general-->
+				<input type="button" value="0" class="numButton_G_1"
+					   name="general_1" onclick="generalD_4_1(1)" oncontextmenu="generalD_4_1(-1)">
+				<input type="button" value="0" class="numButton_G_2"
+					   name="general_2" onclick="generalD_4_2(1)" oncontextmenu="generalD_4_2(-1)">
+				<input type="button" value="0" class="numButton_G_3"
+					   name="general_3" onclick="generalD_4_3(1)" oncontextmenu="generalD_4_3(-1)">
+			</center>
+			<br>
+			<center>
+				<input type="button" value="-1" class="numButton_A"
+					   name="m_btn" onclick="countChange_4(-1)">
+				<input type="button" value="+1" class="numButton_A"
+					   name="p_btn" onclick="countChange_4(1)">　　　　　　
+					<br>　　　
+				<input type="button" value="-5" class="numButton_B"
+					   name="m_5_btn" onclick="countChange_4(-5)">　
+				<input type="button" value="+5" class="numButton_B"
+					   name="p_5_btn" onclick="countChange_4(5)">　　　
+				<input type="button" value="20" class="numButton_C"
+					   name="Reset_btn" onclick="countReset_4(20)">
+			</center>
+		</form>
+		<!-- ここからgoyfー-->
+		<form name = "formG" class="goyf"><br>
+			<input type="button" value="Land" class="goyfCountL"
+				   name="land" onclick="goyfCount_L()">
+			<input type="button" value="Creature" class="goyfCountC"
+				   name="creature" onclick="goyfCount_C()">
+			<input type="button" value="Instant" class="goyfCountI"
+				   name="instant" onclick="goyfCount_I()">
+			<input type="button" value="Sorcery" class="goyfCountS"
+				   name="sorcery" onclick="goyfCount_S()">
+			<input type="button" value="Enchantment" class="goyfCountE"
+				   name="enchantment" onclick="goyfCount_E()">
+			<input type="button" value="Artifact" class="goyfCountA"
+				   name="artifact" onclick="goyfCount_A()">
+			<input type="button" value="PlanesWalker" class="goyfCountP"
+				   name="planeswalker" onclick="goyfCount_P()">
+			<input type="button" value="Trival" class="goyfCountT"
+				   name="trival" onclick="goyfCount_T()">
+			<input type="button" value="OHAGOSAURUS" class="goyfCountO"
+				   name="ohagosaurus" onclick="goyfCount_O()">
+			<br>
+			Tarmogoyf is...
+			<input type="text" value="0/1" class="goyfCount"
+				   name="cnt_goyf" readonly>
+		</form>
+		<br>
+		4人まで増えるボタン
+		<form name = "addP">
+			<input type="button" value="0" class="addPlayer"
+				   name="orangeP" onclick="addOrange()">
+			<input type="button" value="0" class="addPlayer"
+				   name="greenP" onclick="addGreen()">
+		</form>
+		general damage用
+		<form name = "addG">
+			<input type="button" value="0" class="addGeneral"
+				   name="general" onclick="addGeneral()">
+		</form>
+	</body>
+</html>
