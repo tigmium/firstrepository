@@ -1,0 +1,207 @@
+body{
+	width:850px;
+	height:740px;
+}
+
+.allReset{
+	clear:left;
+	width:12%;
+	height:13%;
+	background-color:#45aa45;
+	border-radius:55%;
+	margin-left: 34%;
+	display:block;
+	font-size:large;
+}
+
+.numCounter{
+	float:left;
+	width:40%;
+	height:30%;
+	margin:10px 10px 10px 0px;
+	background-color:#992235;
+	border-radius:20%;
+	vertical-align:middle;
+}
+
+.numCounter_2{
+	float:left;
+	/*float:leftがあると左にくっつく。やめるときはclear:leftとかだった気がする*/
+	width:40%;
+	height:30%;
+	margin:10px 10px 10px 0px;
+	background-color:#352299;
+	border-radius:20%;
+	vertical-align:middle;
+}
+
+.numCounter_3{
+	float:left;
+	/*float:leftがあると左にくっつく。やめるときはclear:leftとかだった気がする*/
+	width:40%;
+	height:30%;
+	margin:10px 10px 10px 0px;
+	background-color:orange;
+	border-radius:20%;
+	vertical-align:middle;
+	display:none;
+}
+
+.numCounter_4{
+	float:left;
+	/*float:leftがあると左にくっつく。やめるときはclear:leftとかだった気がする*/
+	width:40%;
+	height:30%;
+	margin:10px 10px 10px 0px;
+	background-color:#66ff44;
+	border-radius:20%;
+	vertical-align:middle;
+	display:none;
+}
+
+.numButton_A{
+	font-weight:bold;
+	width:15%;
+	height:20%;
+	border-radius:50%;
+}
+
+.numButton_B{
+	font-weight:bold;
+	width:12%;
+	height:18%;
+	border-radius:50%;
+}
+
+.numButton_C{
+	font-weight:bold;
+	width:15%;
+	height:20%;
+	border-radius:40%;
+	position:relative;
+}
+
+.countOut{
+	clear: left;
+	width: 40%;
+	height: 40%;
+	font-size: 470%;
+	margin-left: auto;
+    margin-right: auto;
+	border-radius:20%;
+	text-align: center;
+	border-style:none;
+}
+
+.countOut_2{
+	clear: left;
+	width: 40%;
+	height: 40%;
+	font-size: 470%;
+	margin-left: auto;
+    margin-right: auto;
+	border-radius:20%;
+	text-align: center;
+	border-style:none;
+}
+
+.countOut_3{
+	clear: left;
+	width: 40%;
+	height: 40%;
+	font-size: 470%;
+	margin-left: auto;
+    margin-right: auto;
+	border-radius:20%;
+	text-align: center;
+	border-style:none;
+}
+
+.countOut_4{
+	clear: left;
+	width: 40%;
+	height: 40%;
+	font-size: 470%;
+	margin-left: auto;
+    margin-right: auto;
+	border-radius:20%;
+	text-align: center;
+	border-style:none;
+}
+/*多人数戦の用途でカウンター増やしたいなら_2とか書いてある項目をコピペして_xとかにすればいいと思う*/
+
+.numButton_P{
+	width:15%;
+	height:20%;
+	background-color:purple;
+	color:white;
+	border-radius:90%;
+}
+
+.goyf{
+	clear: left;
+}
+
+.goyfCount{
+	width:30px;
+	border-style:none;
+}
+
+.goyfCountL{
+	border-radius:20%;
+}
+
+.goyfCountC{
+	border-radius:20%;
+}
+
+.goyfCountI{
+	border-radius:20%;
+}
+
+.goyfCountS{
+	border-radius:20%;
+}
+
+.goyfCountE{
+	border-radius:20%;
+}
+
+.goyfCountA{
+	border-radius:20%;
+}
+
+.goyfCountP{
+	border-radius:20%;
+}
+
+.goyfCountT{
+	border-radius:20%;
+}
+
+.goyfCountO{
+	border-radius:20%;
+}
+
+/*general counter*/
+.numButton_G_1{
+	background-color:#992235;
+	color:white;
+	display:none;
+}
+
+.numButton_G_2{
+	background-color:#352299;
+	color:white;
+	display:none;
+}
+
+.numButton_G_3{
+	background-color:orange;
+	display:none;
+}
+
+.numButton_G_4{
+	background-color:#66ff44;
+	display:none;
+}
